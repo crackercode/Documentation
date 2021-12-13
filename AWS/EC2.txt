@@ -1,0 +1,2 @@
+
+EC2 User Data - Bootstrapping means launching commands when a machine starts, only run once at instace first start. Script runs with root user.

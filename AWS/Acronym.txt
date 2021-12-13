@@ -1,0 +1,6 @@
+
+EC2 - Elastic Compute Cloud
+EBS
+EFS
+ELB 
+ASG - Auto Scaling Group
