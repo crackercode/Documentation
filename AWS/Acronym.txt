@@ -1,5 +1,6 @@
 
 EC2 - Elastic Compute Cloud
+AMI - Amazon Machine Image
 EBS
 EFS
 ELB 
