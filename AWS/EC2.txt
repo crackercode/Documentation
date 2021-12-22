@@ -29,5 +29,11 @@ Security Group - A security group acts as a virtual firewall for your EC2 instan
 443 - HTTPS - Access secured websites
 3389 - RDP - (Remote Desktop Protocol) - log into a windows instace
 
+SSH to EC2 instance - Add SG with port 22 open to EC2.
+ssh -i C:\..\key.pem ec2-user@public-ip
+Change permission of pem.
+Linux - chmod 004 C:\..\key.pem
+Windows - Righ click -> Properties -> Security -> Advanced -> change owner ->  Add full controll permission.
+Never enter your IAM APA key(Access Key and Secret Access Key). Instead use IAM rules.
 
- 
+IM Roles - Provide aws credentials to aws services(EC2).
