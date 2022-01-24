@@ -43,4 +43,7 @@ Instance Launch Types
 	- Convertible Reserved Instances - long workloads with flexible instances - can change EC2 instance type 
 	- Scheduled Reserved Instances - every monday between 1 and 2pm
 - Spot instances - short workloads,cheap, can lose instances(less reliable)
-- Dedicated hosts - book an entire physical server, control instance placement	
+- Dedicated hosts - book an entire physical server, control instance placement. Most expensive.
+
+Compute Optimized -
+Storage Optimized - workloads requiring high,sequantial read/write access to large data sets on local storage
