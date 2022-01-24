@@ -34,4 +34,13 @@ Linux - chmod 004 C:\..\key.pem
 Windows - Righ click -> Properties -> Security -> Advanced -> change owner ->  Add full controll permission.
 Never enter your IAM APA key(Access Key and Secret Access Key). Instead use IAM rules.
 
-IM Roles - Provide aws credentials to aws services(EC2).
+IM Roles - Provide aws credentials to aws services like EC2. Then can access other service without entering secrets.
+
+Instance Launch Types 
+- On demand instances - short workload
+- Reserved (Min 1yr) 
+	- Reserved Instances - long workloads (ex : DB)
+	- Convertible Reserved Instances - long workloads with flexible instances - can change EC2 instance type 
+	- Scheduled Reserved Instances - every monday between 1 and 2pm
+- Spot instances - short workloads,cheap, can lose instances(less reliable)
+- Dedicated hosts - book an entire physical server, control instance placement	
