@@ -1,0 +1,17 @@
+
+Inheritance - Object of one class gets properties and behaviour of another class.
+why - code reusability, method overriding, 
+super - Used to access parent methods and variables
+
+Polymorphism - Ability to take more than one form
+
+	-> Compile time polymorphism(Method oveloading) - Method with same name but different method signature(Method name + No of arguments, Argument type)
+													  Same method name and signature but different return type will throw compile error
+	
+	It improves code clarity and allows for the use of a single name for similar procedures.
+	It has a faster execution time since it is discovered early in the compilation process
+	
+	-> Runtime polymorphism(Method overriding)
+	
+
+ 
