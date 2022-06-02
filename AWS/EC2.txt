@@ -1,5 +1,9 @@
 
-EC2 User Data - Bootstrapping means launching commands when a machine starts, only run once at instace first start. Script runs with root user.
+IAM (Identity and Access Management), Global Service. Groups only contains users not other groups. 
+User don't have to belong to group but user can belong to multiple groups
+
+EC2 User Data - Bootstrapping means launching commands when a machine starts, only run once at instace first start. 
+Script runs with root user.
 
 x5.2xlarge
 m : instance class
@@ -18,7 +22,11 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 
 check status - systemctl status httpd
 
-Security Group - A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance. Security groups are associated with network interfaces. Can be attached to multiple instaces. Locked down to a region/VPC combination. Good to maintain one separate SG for SSH access. All inbound traffic is blocked and outbound traffic is authorized by default. Used to commiunicate through EC2 no need to worry about IP's.
+Security Group - A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. 
+Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance. 
+Security groups are associated with network interfaces. Can be attached to multiple instaces. Locked down to a region/VPC combination. 
+Good to maintain one separate SG for SSH access. All inbound traffic is blocked and outbound traffic is authorized by default. 
+Used to commiunicate through EC2 no need to worry about IP's.
 
 22 - SSH (Secure Shell) - Log into to a linux instace
 21 - FTP (File transfer Portocol) - Upload files into a file share
