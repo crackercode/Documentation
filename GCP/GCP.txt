@@ -1,0 +1,8 @@
+
+gcloud compute regions list
+
+//get instances list
+gcloud compute instances list
+
+//ssh to instance
+gcloud compute ssh instance-1 --zone asia-southeast1-a
