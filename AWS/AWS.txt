@@ -57,6 +57,3 @@ AWS Points of Presence (Edge Locations) - Content is delivered to end users with
 Private Cloud - Cloud service used by a single organization, not exposed to public 
 Public Cloud - Cloud resources owned and operated by a 3rd party cloud service provider delivered over the internet [aws,azure,GCP]
 Hybrid Cloud - Keep some servers on permises and extend some capabilities to the cloud
-
-IAM (Identity and Access Management), Global Service. Groups only contains users not other groups. 
-User don't have to belong to group but user can belong to multiple groups. Least privilege principle.

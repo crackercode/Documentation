@@ -1,0 +1,21 @@
+IAM (Identity and Access Management), Global Service. Groups only contains users not other groups. 
+Root account - created by default, should not be used or shared 
+User don't have to belong to group but user can belong to multiple groups. 
+
+IAM : Permission = Policies. Apply least privilege principle.
+
+IAM Policies inheritance - Create a group and add policy to group and assign users.
+
+IAM : Password Policy
+	- Strong password
+	- Multi Factor Authentication - MFA
+		- Virtusal MFA device - Google Authenticator
+		- Universal 2nd Factor [(U2F) Security Key]
+		- Hardware MFA Device
+		
+How can user access AWS
+	- AWS management console - Password + MFA
+	- AWS Command Line Interface (CLI) - Access Key
+	- AWS Software Developer Kit (SDK) - Access Key
+	
+Access Key - Just like password	
