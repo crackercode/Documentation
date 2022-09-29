@@ -1,7 +1,7 @@
 
 EC2 - Elastic Compute Cloud
 AMI - Amazon Machine Image
-EBS
-EFS
-ELB 
+EBS - Elastic Block Store
+EFS - Elastic File System
+ELB - Elastic Load Balancing
 ASG - Auto Scaling Group

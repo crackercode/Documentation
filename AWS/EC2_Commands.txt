@@ -1,0 +1,14 @@
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+check status - systemctl status httpd
+
+SSH to EC2 instance - Add SG with port 22 open to EC2.
+ssh -i C:\..\key.pem ec2-user@public-ip
+Change permission of pem.
+Linux - chmod 004 C:\..\key.pem
+Windows - Righ click -> Properties -> Security -> Advanced -> change owner ->  Add full controll permission.
