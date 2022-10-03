@@ -22,17 +22,18 @@ https://instances.vantage.sh/
 
 EC2 Instance Types 
 	- General Purpose(t2)
-	- Compute Optimized - Machine Learning
-	– Memory Optimized - relational/non-relational databases
-	- Storage Optimized
+	- Compute Optimized - compute-intensive tasks that require high performance - Machine Learning, Gaming
+	– Memory Optimized - workloads that process large data sets in memory - relational/non-relational databases
+	- Storage Optimized - storage-intensive tasks that require high, sequential read and write
+						  access to large data sets on local storage - Data warehousing
 	
 Security Group - A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. 
-	-
-Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance. 
-Security groups are associated with network interfaces. Can be attached to multiple instaces. Locked down to a region/VPC combination. 
-Good to maintain one separate SG for SSH access.
-All inbound traffic is blocked and outbound traffic is authorized by default. 
-Used to commiunicate through EC2 no need to worry about IP's.
+	- Access to Ports, Authorised IP ranges – IPv4 and IPv6, Control of inbound network, Control of outbound network 	
+	- Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance. 
+	- Security groups are associated with network interfaces. Can be attached to multiple instaces. Locked down to a region/VPC combination. 
+	- Good to maintain one separate SG for SSH access - best practice.
+	- All inbound traffic is blocked and outbound traffic is authorized by default. 
+	- Used to commiunicate through EC2 no need to worry about IP's.
 
 22 - SSH (Secure Shell) - Log into to a linux instace
 21 - FTP (File transfer Portocol) - Upload files into a file share
@@ -41,18 +42,22 @@ Used to commiunicate through EC2 no need to worry about IP's.
 443 - HTTPS - Access secured websites
 3389 - RDP - (Remote Desktop Protocol) - log into a windows instace
 
-Never enter your IAM APA key(Access Key and Secret Access Key). Instead use IAM rules.
+Never enter your IAM API key(Access Key and Secret Access Key) using aws configure inside EC2. Instead use IAM rules.
 
 IM Roles - Provide aws credentials to aws services like EC2. Then can access other service without entering secrets.
 
 Instance Launch Types 
-- On demand instances - short workload
-- Reserved (Min 1yr) 
+- On demand instances - short workload, Has the highest cost, short-term and un-interrupted workloads, 
+  where you can't predict how the application will behave
+- Reserved (Min 1yr)
+	* Reservation Period – 1 year (+discount) or 3 years (+++discount)
+	* Payment Options – No Upfront (+), Partial Upfront (++), All Upfront (+++)
+	* Reserved Instance’s Scope – Regional or Zonal (reserve capacity in an AZ)
 	- Reserved Instances - long workloads (ex : DB)
 	- Convertible Reserved Instances - long workloads with flexible instances - can change EC2 instance type 
 	- Scheduled Reserved Instances - every monday between 1 and 2pm
-- Spot instances - short workloads,cheap, can lose instances(less reliable)
-- Dedicated hosts - book an entire physical server, control instance placement. Most expensive.
-
-Compute Optimized -
-Storage Optimized - workloads requiring high,sequantial read/write access to large data sets on local storage
+- Spot instances - short workloads, cheapest, can lose instances(less reliable)
+- Dedicated hosts - Book an entire physical server, control instance placement. Most expensive.
+- Dedicated Instances – Instances run on hardware that’s dedicated to you, no other customers will share your hardware
+                        No control over instance placement (Diff with instace host)
+- Capacity Reservations – Reserve capacity in a specific AZ for any duration

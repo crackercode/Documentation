@@ -1,0 +1,2 @@
+Security Group - A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. 
+IM Roles - Provide aws credentials to aws services like EC2. Then can access other service without entering secrets.

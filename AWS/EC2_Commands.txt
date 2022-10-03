@@ -12,3 +12,4 @@ ssh -i C:\..\key.pem ec2-user@public-ip
 Change permission of pem.
 Linux - chmod 004 C:\..\key.pem
 Windows - Righ click -> Properties -> Security -> Advanced -> change owner ->  Add full controll permission.
+
