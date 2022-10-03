@@ -1,0 +1,11 @@
+EBS - Elastic Block Store 
+- provides storage volumes(Extra General Purpose (SSD) or Magnetic per month) for use with EC2 instances
+- network drive you can attach to your instances while they run
+- can only be mounted to one instance at a time
+- bound to a specific availability zone
+
+EBS Snapshots
+- Make a backup (snapshot) of your EBS volume at a point in time
+- Way of move data from one AZ to another
+- Not necessary to detach volume to do snapshot, but recommended
+- Can copy snapshots across AZ or Region
