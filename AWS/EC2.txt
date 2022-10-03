@@ -20,10 +20,18 @@ m : instance class
 https://aws.amazon.com/ec2/instance-types/
 https://instances.vantage.sh/
 
+EC2 Instance Types 
+	- General Purpose(t2)
+	- Compute Optimized - Machine Learning
+	– Memory Optimized - relational/non-relational databases
+	- Storage Optimized
+	
 Security Group - A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. 
+	-
 Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance. 
 Security groups are associated with network interfaces. Can be attached to multiple instaces. Locked down to a region/VPC combination. 
-Good to maintain one separate SG for SSH access. All inbound traffic is blocked and outbound traffic is authorized by default. 
+Good to maintain one separate SG for SSH access.
+All inbound traffic is blocked and outbound traffic is authorized by default. 
 Used to commiunicate through EC2 no need to worry about IP's.
 
 22 - SSH (Secure Shell) - Log into to a linux instace
