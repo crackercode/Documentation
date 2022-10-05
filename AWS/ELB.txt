@@ -1,0 +1,20 @@
+Elastic Load Balancing (ELB)
+
+Scalability - means that an application / system can handle greater loads
+by adapting
+	- Vertical Scalability - Vertical Scalability means increasing the size of the instance
+							 change t2.micro to t2.large
+	- Horizontal Scalability - Horizontal Scalability means increasing the number of 
+							   instances / systems for your application
+							   Eg : EC2 and Auto Scaling Groups and Load Balancer
+						
+High Availability - Run instances for the same application across multi AZ
+	- Auto Scaling Group multi AZ and Load Balancer multi AZ
+	
+ELB - Load balancers are servers that forward internet traffic to multiple servers (EC2 Instances) downstream. 
+
+Types of load balancers offered by AWS:
+ - Application Load Balancer (HTTP / HTTPS only) – Layer 7
+ - Network Load Balancer (ultra-high performance, allows for TCP) – Layer 4
+ - Gateway Load Balancer - Deploy, scale, and manage your third-party virtual appliances. 
+ - Classic Load Balancer (slowly retiring) – Layer 4 & 7
