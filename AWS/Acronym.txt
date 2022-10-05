@@ -5,3 +5,5 @@ EBS - Elastic Block Store
 EFS - Elastic File System
 ELB - Elastic Load Balancing
 ASG - Auto Scaling Group
+AMI - Amazon Machine Image
+EFS – Elastic File System
