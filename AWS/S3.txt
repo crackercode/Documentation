@@ -64,3 +64,62 @@ S3 Replication (CRR=Cross Region Replication & SRR=Same Region Replication)
 	- Must give proper IAM permissions to S3
 CRR - Use cases: compliance, lower latency access, replication across accounts
 SRR – Use cases: log aggregation, live replication between production and test accounts
+
+S3 Storage Classes
+Durability - High durability (99.999999999%, 11 9’s) of objects across multiple AZ. Same for all storage classes
+Availability - Measures how readily available a service is. Varies depending on storage class
+
+- Amazon S3 Standard - General Purpose
+	Used for frequently accessed data. Low latency and high throughput
+	Big Data analytics, mobile & gaming applications, content distribution
+
+- Amazon S3 Standard-Infrequent Access (IA)
+	For data that is less frequently accessed, but requires rapid access when needed. Lower cost than S3 Standard
+	Disaster Recovery, backups
+
+- Amazon S3 One Zone-Infrequent Access
+	For data that is less frequently accessed, but requires rapid access when needed. Lower cost than S3 Standard
+	Storing secondary backup copies of on-premise data, or data you can recreate
+		
+- Amazon S3 Glacier Instant Retrieval
+	Low-cost object storage meant for archiving / backup
+	Millisecond retrieval, great for data accessed once a quarter
+		
+- Amazon S3 Glacier Flexible Retrieval (formerly Amazon S3 Glacier)
+	Low-cost object storage meant for archiving / backup
+	Expedited (1 to 5 minutes), Standard (3 to 5 hours), Bulk (5 to 12 hours) – free
+		
+- Amazon S3 Glacier Deep Archive – for long term storage
+	Low-cost object storage meant for archiving / backup
+	Standard (12 hours), Bulk (48 hours)
+
+- Amazon S3 Intelligent Tiering
+	Moves objects automatically between Access Tiers based on usage
+	Small monthly monitoring and auto-tiering fee
+	Frequent Access tier, Infrequent Access tier, Archive Instant Access tier, Archive Access tier, Deep Archive Access tier
+
+S3 Object Lock - Block an object version deletion for a specified amount of time
+Glacier Vault Lock - Lock the policy for future edits. Ex compliance and data retention
+
+S3 Encryption
+	No Encryption
+	Server-Side Encryption - Server encrypts the file after receiving it
+	Client-Side Encryption - Encrypts the file Before uploading it
+
+AWS Snow Family - Highly-secure, portable devices to collect and process data at the edge and migrate data into and out of AWS
+
+AWS Storage Gateway - Bridge between on-premise data and cloud data in S3. Hybrid Cloud for Storage
+
+Amazon S3 – Summary
+Buckets vs Objects: global unique name, tied to a region
+S3 security: IAM policy, S3 Bucket Policy (public access), S3 Encryption
+S3 Websites: host a static website on Amazon S3
+S3 Versioning: multiple versions for files, prevent accidental deletes
+S3 Access Logs: log requests made within your S3 bucket
+S3 Replication: same-region or cross-region, must enable versioning
+S3 Storage Classes: Standard, IA, 1Z-IA, Intelligent, Glacier, Glacier Deep Archive
+S3 Lifecycle Rules: transition objects between classes
+S3 Glacier Vault Lock / S3 Object Lock: WORM (Write Once Read Many)
+Snow Family: import data onto S3 through a physical device, edge computing
+OpsHub: desktop application to manage Snow Family devices
+Storage Gateway: hybrid solution to extend on-premises storage to S3
