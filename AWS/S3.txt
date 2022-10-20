@@ -51,3 +51,16 @@ S3 - Versioning
 	- Easy roll back to previous version
 	- Any file that is not versioned prior to enabling versioning will have version “null”
 	- Suspending versioning does not delete the previous versions
+	
+S3 Access Logs 
+	- audit purpose log all access to S3 buckets
+	- Any request made to S3, from any account, authorized or denied, will be logged into another S3 bucket
+	- Put logs to Logging Bucket
+
+S3 Replication (CRR=Cross Region Replication & SRR=Same Region Replication)
+	- Must enable versioning in source and destination
+	- Buckets can be in different accounts
+	- Copying is asynchronous
+	- Must give proper IAM permissions to S3
+CRR - Use cases: compliance, lower latency access, replication across accounts
+SRR – Use cases: log aggregation, live replication between production and test accounts
