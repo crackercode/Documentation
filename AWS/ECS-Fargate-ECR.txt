@@ -1,0 +1,11 @@
+ECS - Elastic Container Service
+	Launch Docker containers on
+	You must provision & maintainthe infrastructure (the EC2instances)
+
+AWS Fargate
+	Launch Docker containers on AWS
+	You do not provision the infrastructure (no EC2 instances to manage)
+	
+ECR - Elastic Container Registry
+	Private Docker Registry on
+	This is where you store your Docker images so they can be run by ECS or Fargate

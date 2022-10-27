@@ -9,3 +9,8 @@ AMI - Amazon Machine Image
 EFS – Elastic File System
 CRR - Cross Region Replication
 SRR - Same Region Replication 
+RDS - Relational Database Service
+EMR - Elastic MapReduce
+ECS - Elastic Container Service
+ECR - Elastic Container Registry
+CDK - Cloud Development Kit

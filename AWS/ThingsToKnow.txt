@@ -1,2 +1,31 @@
 Security Group - A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. 
 IM Roles - Provide aws credentials to aws services like EC2. Then can access other service without entering secrets.
+
+Docker : container technology to run applications
+ECS : run Docker containers on EC2 instances
+Fargate : Run Docker containers without provisioning the infrastructure, Serverless offering (no EC2 instances)
+ECR : Private Docker Images Repository
+Batch : run batch jobs on AWS across managed EC2 instances
+Lightsail : predictable & low pricing for simple application & DB stacks
+
+
+Deployment - Summary
+	CloudFormation: (AWS only)
+	Infrastructure as Code, works with almost all of AWS resources
+	Repeat across Regions & Accounts
+	Beanstalk: (AWS only)
+	Platform as a Service (PaaS), limited to certain programming languages or Docker
+	Deploy code consistently with a known architecture: ex, ALB + EC2 + RDS
+	CodeDeploy (hybrid): deploy & upgrade any application onto servers
+	Systems Manager (hybrid): patch, configure and run commands at scale
+	OpsWorks (hybrid): managed Chef and Puppet in AWS
+	
+Developer Services - Summary
+	CodeCommit: Store code in private git repository (version controlled)
+	CodeBuild: Build & test code in AWS
+	CodeDeploy: Deploy code onto servers
+	CodePipeline: Orchestration of pipeline (from code to build to deploy)
+	CodeArtifact: Store software packages / dependencies on AWS
+	CodeStar: Unified view for allowing developers to do CICD and code
+	Cloud9: Cloud IDE (Integrated Development Environment) with collab
+	AWS CDK: Define your cloud infrastructure using a programming language

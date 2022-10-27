@@ -1,0 +1,36 @@
+CloudFormation - CloudFormation is a declarative way of outlining your AWS
+Infrastructure, for any resources
+creates resources for you, in the right order, with the exact configuration that you specify
+
+Benefits of AWS CloudFormation
+	Infrastructure as code - No resources are manually created
+	Cost - estimate the costs of your resources using the CloudFormation template
+		 - Savings strategy: In Dev, you could automation deletion of templates at 5 PM and recreated at morning
+	Productivity - Ability to destroy and re-create an infrastructure on the cloud on the fly
+	Supports (almost) all AWS resources 
+	
+AWS Cloud Development Kit - Define your cloud infrastructure using a familiar language Eg : Java
+
+Beanstalk - Platform as a Service (PaaS) - Elastic Beanstalk is a developer centric view of deploying
+an application on AWS
+
+AWS CodeDeploy - We want to deploy or update our application automatically
+
+AWS CodeCommit - Source-control service that hosts Git-based repositories
+
+AWS CodeBuild - Compiles source code, run tests, and produces packages that are ready to be deployed
+
+AWS CodePipeline - Orchestrate the different steps to have the code automatically pushed to production
+
+AWS CodeArtifact - Aws artifact management Storing and retrieving these dependencies is called 
+
+AWS CodeStar - Unified UI to easily manage software development activities in one place. 
+				CodeCommit, CodePipeline, CodeBuild, CodeDeploy, Elastic Beanstalk, EC2
+				
+AWS Cloud9 - AWS Cloud9 is a cloud IDE (Integrated Development Environment) for writing, running and debugging code
+
+Systems Manager (SSM) - Helps you manage your EC2 and On-Premises systems at scale. Hybrid AWS service
+
+SSM Session Manager - Allows you to start a secure shell on your EC2 and on-premises servers
+
+OpsWorks - Chef & Puppet help you perform server configuration automatically, or repetitive actions
