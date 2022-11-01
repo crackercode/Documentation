@@ -1,0 +1,50 @@
+S3 Transfer Acceleration - Increase transfer speed by transferring file to an AWS edge location
+which will forward the data to the S3 bucket in the target region
+
+AWS Global Accelerator 
+- Improve global application availability and performance using the AWS global network
+- Leverage the AWS internal network to optimize the route to your application
+
+CloudFront – Content Delivery Network
+- Improves performance for your cacheable content (such as images and videos)
+- Content is served at the edge
+
+Global Accelerator
+- No caching, proxying packets at the edge to applications running in one or more AWS Regions.
+- Improves performance for a wide range of applications over TCP or UDP
+- Good for HTTP use cases that require static IP addresses
+- Good for HTTP use cases that required deterministic, fast regional failover
+
+AWS Outposts 
+- Hybrid Cloud: businesses that keep an on-premises infrastructure alongside a cloud infrastructure
+- AWS will setup and manage Outposts Racks within your on-premises infrastructure and you 
+	can start leveraging AWS services on-premises
+	
+AWS WaveLength 
+- WaveLength Zones are infrastructure deployments embedded within the telecommunications
+ providers datacenters at the edge of the 5G networks
+- Use cases: Smart Cities, ML-assisted diagnostics, Connected Vehicles, Interactive Live Video Streams, AR/VR,
+ Real-time Gaming
+ 
+AWS Local Zones - Places AWS compute, storage, database, and other selected AWS services closer
+to end users to run latency-sensitive applications
+
+Global DNS: Route 53
+	Great to route users to the closest deployment with least latency
+	Great for disaster recovery strategies
+Global Content Delivery Network (CDN): CloudFront
+	Replicate part of your application to AWS Edge Locations – decrease latency
+	Cache common requests – improved user experience and decreased latency
+S3 Transfer Acceleration
+	Accelerate global uploads & downloads into Amazon S3
+AWS Global Accelerator
+	Improve global application availability and performance using the AWS global network
+	
+AWS Outposts
+	Deploy Outposts Racks in your own Data Centers to extend AWS services
+AWS WaveLength
+	Brings AWS services to the edge of the 5G networks
+	Ultra-low latency applications
+AWS Local Zones
+	Bring AWS resources (compute, database, storage, …) closer to your users
+	Good for latency-sensitive applications

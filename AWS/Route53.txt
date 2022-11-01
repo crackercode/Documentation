@@ -1,0 +1,12 @@
+Route53 is a Managed DNS (Domain Name System)
+
+12.34.56.78 == A record (IPv4)
+2001:0db8:85a3:0000:0000:8a2e:0370:7334 == AAAA IPv6
+CNAME: hostname to hostname
+AWS resource == Alias (ex: ELB, CloudFront, S3, RDS, etc)
+
+Route 53 Routing Policies
+simple routing policy - No health checks
+weighted routing policy - Provide weight to server
+latency routing policy - Check user location and route to nearest server
+failover routing policy - Disaster Recovery
