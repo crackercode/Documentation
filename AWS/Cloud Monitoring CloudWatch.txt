@@ -1,0 +1,52 @@
+CloudWatch - provides metrics for every services in AWS
+
+CloudWatch Alarms - used to trigger notifications for any metric
+- Auto Scaling: increase or decrease EC2 instances “desired” count
+- EC2 Actions: stop, terminate, reboot or recover an EC2 instance
+- SNS notifications: send a notification into an SNS topic
+
+CloudWatch Logs - Enables real-time monitoring of logs
+- can collect log from Elastic Beanstalk ,ECS, AWS Lambda, CloudTrail, Route53
+- By default, no logs. You need to run a CloudWatch agent on EC2 to push the log files
+
+Amazon EventBridge - CloudWatch Events
+	- Schedule: Cron jobs; Ex invoke lambda
+	- Event Pattern: Event rules to react to a service doing something : IAM Root User Sign in Event
+	
+Types
+	- Default Event Bus - from AWS Services
+	- Partner Event Bus - from AWS SaaS Partners Eg: Zendesk
+	- Custom Event Bus - from Custom app
+	
+CloudTrail - Provides governance, compliance and audit for your AWS Account
+	- Get an history of events / API calls made within your AWS Account
+	- A trail can be applied to All Regions (default) or a single Region
+	- If a resource is deleted in AWS, investigate CloudTrail first
+	
+AWS X-Ray - Debugging in Production
+
+AWS X -Ray advantages
+- Troubleshooting performance (bottlenecks) 
+- Understand dependencies in a microservice architecture 
+- Pinpoint service issues - Review request behavior 
+- Find errors and exceptions - Are we meeting time SLA? 
+- Where I am throttled? 
+- Identify users that are impacted
+
+CodeGuru - automated code reviews and application performance recommendations 
+	- CodeGuru Reviewer: automated code reviews for static code analysis (development)
+	- CodeGuru Profiler: visibility/recommendations about application performance during runtime (production)
+	
+AWS Status - Service Health Dashboard - Shows all regions, all services health
+
+CloudWatch:
+- Metrics: monitor the performance of AWS services and billing metrics
+- Alarms: automate notification, perform EC2 action, notify to SNS based on metric
+- Logs: collect log files from EC2 instances, servers, Lambda functions…
+- Events (or EventBridge): react to events in AWS, or trigger a rule on a schedule
+- CloudTrail: audit API calls made within your AWS account
+- CloudTrail Insights: automated analysis of your CloudTrail Events
+- X-Ray: trace requests made through your distributed applications
+- Service Health Dashboard: status of all AWS services across all regions
+- Personal Health Dashboard: AWS events that impact your infrastructure
+- Amazon CodeGuru: automated code reviews and application performance recommendations

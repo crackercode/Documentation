@@ -1,0 +1,38 @@
+Types
+Synchronous communications (application to application)
+Asynchronous / Event based (application to queue to application)
+
+Decouple your applications:
+- using SQS: queue model
+- using SNS: pub/sub model
+- using Kinesis: real-time data streaming model
+
+SQS - Simple Queue Service - use to decouple applications
+
+Kinesis - real-time big data streaming
+- Managed service to collect, process, and analyze real-time streaming data at any scale
+
+Kinesis Data Streams: low latency streaming to ingest data at scale from hundreds of thousands of sources
+Kinesis Data Firehose: load streams into S3, Redshift, ElasticSearch, etc
+Kinesis Data Analytics: perform real-time analytics on streams using SQL
+Kinesis Video Streams: monitor real-time video streams for analytics or ML
+
+SNS - Simple Notification Service
+- send one message to many receivers
+- event publishers” only sends message sns topic Each subscriber to the topic will get all the messages
+
+Amazon MQ - managed Apache ActiveMQ
+has both queue feature (SQS) and topic features (SNS)
+
+SQS:
+- Queue service in AWS
+- Multiple Producers, messages are kept up to 14 days
+- Multiple Consumers share the read and delete messages when done
+- Used to decouple applications in AWS
+SNS:
+- Notification service in AWS
+- Subscribers: Email, Lambda, SQS, HTTP, Mobile…
+- Multiple Subscribers, send all messages to all of them
+- No message retention
+Kinesis: real-time data streaming, persistence and analysis
+Amazon MQ: managed Apache MQ in the cloud (MQTT, AMQP.. protocols)
