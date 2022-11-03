@@ -1,0 +1,61 @@
+VPC - Virtual Private Cloud - private network to deploy your resources (regional resource)
+
+Subnets allow you to partition your network inside your VPC (Availability Zone resource)
+
+Public subnet - subnet that is accessible from the internet
+
+Private subnet - subnet that is not accessible from the internet
+
+Route Tables - define access to the internet and between subnets
+
+Internet Gateways - VPC instances connect with the internet
+
+NAT Gateways (AWS-managed)
+
+NAT Instances (self-managed) -allow your instances in your 
+	Private Subnets to access the internet while remaining private
+
+NACL (Network ACL) - A firewall which controls traffic from and to subnet
+- Can have ALLOW and DENY rules
+- Are attached at the Subnet level
+- Rules only include IP addresses
+- Stateless: Return traffic must be explicitly allowed by rules
+
+Security Groups
+- A firewall that controls traffic to and from an ENI / an EC2 Instance
+- Can have only ALLOW rules
+- Rules include IP addresses and other security groups
+- Stateful: Return traffic is allowed, regardless of the rules
+
+VPC Flow Logs - IP traffic going into your interfaces VPC Flow Logs, Subnet Flow Logs, Elastic Network Interface Flow Logs
+- helps to monitor & troubleshoot connectivity issues. Example: Subnets to internet, Subnets to subnets, Internet to subnets
+- Captures network information from AWS managed interfaces too: Elastic Load Balancers, ElastiCache, RDS, Aurora
+
+VPC Peering - Connect two VPC, privately using AWS network
+
+VPC Endpoints - allow you to connect to AWS Services using a private network instead of the public www network
+
+AWS PrivateLink (VPC Endpoint Services) - Most secure & scalable way to expose a service to 1000s of VPCs
+
+Site to Site VPN - Connect an on-premises VPN to AWS. Customer Gateway and Virtual Private Gateway needed
+
+Direct Connect (DX) - Establish a physical connection between on-premises and AWS
+ 
+AWS Client VPN - Connect from your computer using OpenVPN to your private network in AWS and on-premises
+ 
+Transit Gateway -transitive peering between thousands of VPC and on-premises, hub-and-spoke (star) connection
+
+VPC: Virtual Private Cloud
+- Subnets:Tied to an AZ, network partition of the VPC
+- Internet Gateway: at the VPC level, provide Internet Access
+- NAT Gateway / Instances: give internet access to private subnets
+- NACL: Stateless, subnet rules for inbound and outbound
+- Security Groups: Stateful, operate at the EC2 instance level or ENI
+- VPC Peering: Connect two VPC with non overlapping IP ranges, nontransitive
+- VPC Endpoints: Provide private access to AWS Services within VPC
+- PrivateLink: Privately connect to a service in a 3rd party VPC
+- VPC Flow Logs: network traffic logs
+- Site to Site VPN: VPN over public internet between on-premises DC and AWS
+- Client VPN: OpenVPN connection from your computer into your VPC
+- Direct Connect: direct private connection to AWS
+- Transit Gateway: Connect thousands of VPC and on-premises networks together
