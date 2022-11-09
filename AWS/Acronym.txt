@@ -16,3 +16,5 @@ ECR - Elastic Container Registry
 CDK - Cloud Development Kit
 SQS - Simple Queue Service
 SNS - Simple Notification Service
+KMS - Key Management Service
+CMK - Customer Master Keys

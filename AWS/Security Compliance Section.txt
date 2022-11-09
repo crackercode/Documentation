@@ -1,0 +1,68 @@
+AWS responsibility - Security of the Cloud
+Customer responsibility - Security in the Cloud
+
+DDOS Protection on AWS
+AWS Shield Standard - Free service that is activated for every AWS customer
+AWS Shield Advanced - 24/7 premium DDoS protection
+AWS WAF - Filter specific requests based on rules
+Define Web ACL (Web Access Control List) :
+	- Rules can include IP addresses, HTTP headers, HTTP body, or URI strings
+	- Protects from common attack - SQL injection and Cross-Site Scripting (XSS)
+	- Size constraints, geo-match (block countries)
+	- Rate-based rules (to count occurrences of events)
+
+Encryption Types
+Data at rest - data stored or archived on a device
+In transit (in motion) - data being moved from one location to another
+					   - Ex Transfer from on-premises to AWS, EC2 to DynamoDB
+
+AWS KMS (Key Management Service) - AWS manages the encryption keys for us
+	- Ex : Encryption Automatically enabled: CloudTrail Logs, S3 Glacier, Storage Gateway
+	
+CloudHSM - AWS provisions encryption hardware
+
+CMK - Customer Master Keys - Customer Managed CMK , AWS managed CMK, AWS owned CMK, CloudHSM Keys
+
+ACM - AWS Certificate Manager - easily provision, manage, and deploy SSL/TLS Certificates
+
+AWS Secrets Manager - storing secrets Secrets are encrypted using KMS
+
+AWS Artifact - Portal that provides customers with on-demand access to AWS compliance documentation and AWS agreements
+
+Amazon GuardDuty - Intelligent Threat discovery to Protect AWS Account. Uses Machine Learning algorithms, anomaly detection
+
+Amazon Inspector - Automated Security Assessments. For EC2 only, install agent and find vulnerabilities
+
+Actions that can be performed only by the root user:
+- Change account settings (account name, email address, root user password, root user access keys)
+- Close your AWS account
+- Change or cancel your AWS Support plan
+- Register as a seller in the Reserved Instance Marketplace
+- View certain tax invoices
+- Restore IAM user permissions
+- Configure an Amazon S3 bucket to enable MFA
+- Edit or delete an Amazon S3 bucket policy that includes an invalid VPC ID or VPC endpoint ID
+- Sign up for GovCloud
+
+Shared Responsibility on AWS
+- Shield: Automatic DDoS Protection + 24/7 support for advanced
+- WAF: Firewall to filter incoming requests based on rules
+- KMS: Encryption keys managed by AWS
+- CloudHSM: Hardware encryption, we manage encryption keys
+- AWS Certificate Manager: provision, manage, and deploy SSL/TLS Certificates
+- Artifact: Get access to compliance reports such as PCI, ISO, etc…
+- GuardDuty: Find malicious behavior with VPC, DNS & CloudTrail Logs
+- Inspector: For EC2 only, install agent and find vulnerabilities
+
+Section Summary: Security & Compliance
+- Config: Track config changes and compliance against rules
+- Macie: Find sensitive data (ex: PII data) in Amazon S3 buckets
+- CloudTrail: Track API calls made by users within account
+- AWS Security Hub: gather security findings from multiple AWS accounts
+- Amazon Detective: find the root cause of security issues or suspicious activities
+- AWS Abuse: Report AWS resources used for abusive or illegal purposes
+- Root user privileges:
+- Change account settings
+- Close your AWS account
+- Change or cancel your AWS Support plan
+- Register as a seller in the Reserved Instance Marketplace
