@@ -1,13 +1,46 @@
 AWS Machine Learning Summary
 
-- Rekognition : face detection, labeling, celebrity recognition
-- Transcribe: audio to text (ex: subtitles) 
-- Polly: text to audio - Translate: translations 
-- Lex: build conversational bots – chatbots 
-- Connect: cloud contact center 
-- Comprehend: natural language processing 
-- SageMaker: machine learning for every developer and data scientist 
-- Forecast: build highly accurate forecasts 
-- Kendra: ML-powered search engine 
-- Personalize: real-time personalized recommendations 
-- Textract: detect text and data in documents
+- Rekognition : Find objects, people, text, scenes in images and videos using ML
+	- Labeling
+	- Content Moderation
+	- Text Detection
+	- Face Detection and Analysis (gender, age range, emotions…)
+	- Face Search and Verification
+	- Celebrity Recognition
+	- Pathing (ex: for sports game analysis)
+	
+- Transcribe: Automatically convert speech to text. audio to text (ex: subtitles) 
+
+- Polly: Turn text into lifelike speech using deep learning. create applications that talk
+
+		text to audio - Translate: translations
+		
+- Translate - Natural and accurate language translation
+			- Ex : localize content
+			
+- Lex - build conversational bots – chatbots ex Alexa
+	  - Natural Language Understanding to recognize the intent of text
+	  
+- Connect - Receive calls, create contact flows, cloud-based virtual contact center. Cloud contact center 
+
+- Comprehend - natural language processing - NLP
+			- Language of the text
+			- Extracts key phrases, places, people, brands, or events
+			- Understands how positive or negative the text is
+			- Analyzes text using tokenization and parts of speech
+			- Automatically organizes a collection of text files by topic
+			
+- SageMaker - machine learning for every developer and data scientist build ML models
+			- predicting your exam score
+			
+- Forecast - build highly accurate forecasts 
+		   - Ex : predict the future sales of a shoes
+		   
+- Kendra - Fully managed document search service. ML-powered search engine
+		 - Ex : Extract answers from within a document
+		 
+- Personalize - real-time personalized recommendations
+			  - User bought gardening tools, provide recommendations on the next one to buy
+			  
+- Textract - Automatically extracts text, handwriting, and data from any scanned documents using AI and ML
+		   - detect text and data in documents
