@@ -1,0 +1,196 @@
+
+main account is the master account
+
+Organizational Units - create sub accounts. 
+	Business Unit Environmental Lifecycle Project-based. Ex dev qa
+	
+Service Control Policies - Whitelist or blacklist IAM actions
+	- Applied at the OU or Account level
+	- SCP is applied to all the Users and Roles of the Account, including Root user
+	- Ex : Restrict access to certain services (for example: can’t use EMR)
+	
+Consolidated Billing - Combined Usage – combine the usage across all AWS accounts in the AWS Organization to
+share the volume pricing, Reserved Instances and Savings Plans discounts
+
+AWS Control Tower - Easy way to set up and govern a secure and compliant multi-account AWS environment
+
+Pricing Models in AWS
+	- Pay as you go: pay for what you use, remain agile, responsive, meet scale demands
+	- Save when you reserve: minimize risks, predictably manage budgets, comply with long-terms requirements
+	- Pay less by using more: volume-based discounts
+	- Pay less as AWS grows
+	
+Compute Pricing – EC2
+	- On-demand instances: Minimum of 60s
+	- Reserved instances: Up to 75% discount compared to On-demand on hourly rate. 1- or 3-years commitment. All upfront, partial upfront, no upfront
+	- Spot instances: Up to 90% discount compared to On-demand on hourly rate. Bid for unused capacity
+	- Dedicated Host: On-demand. Reservation for 1 year or 3 years commitment
+	- Savings plans as an alternative to save on sustained usage
+	
+Lambda - Pay per call. Pay per duration
+
+ECS - EC2 Launch Type Model: No additional fees, you pay for AWS resources stored and created in your application
+
+Fargate - Fargate Launch Type Model: Pay for vCPU and memory resources allocated to your applications in your containers
+
+Storage class - S3 Standard, S3 Infrequent Access, S3 One-Zone IA, S3 Intelligent Tiering, S3 Glacier and S3 Glacier Deep Archive
+	- Number and size of objects. Price can be tiered (based on volume)
+	- Number and type of requests 
+	- Data transfer OUT of the S3 region
+	- S3 Transfer Acceleration
+	- Lifecycle transitions
+
+EBS - Volume type (based on performance). Storage volume in GB per month provisionned. IOPS. Snapshots. Data transfer (Inbound is free)
+
+RDS - Per hour billing. Engine, Size, Memory class
+	- Purchase type On-demand, Reserved instances
+	
+Content Delivery – CloudFront - Pricing is different across different geographic regions
+
+Networking Costs - Free if using private IP within same AZ
+	- Private ip Public IP / Elastic IP between AZ cost money
+	- Inter-region
+	
+AWS Compute Optimizer - Reduce costs and improve performance by recommending optimal AWS resources for your workloads
+
+Pricing Calculator - Estimating costs in the cloud
+Monitoring against costs plans - Billing Alarms Budgets
+Tracking costs in the cloud - Billing Dashboard, Cost Allocation Tags, Cost and Usage Reports, Cost Explorer
+
+Cost Explorer - Visualize, understand, and manage your AWS costs and usage over time
+
+Billing Alarms in CloudWatch - simple alarm for actual cost
+
+AWS Budgets - Create budget and send alarms when costs exceeds the budget. Types Usage, Cost, Reservation
+
+Trusted Advisor - Analyze your AWS accounts and provides recommendation on 5 categories. Cost optimization, Performance, Security, Fault tolerance, Service limits
+
+AWS Support Plans Pricing
+	- Basic Support - free
+	- Customer Service & Communities 
+		- 24x7 access to customer service, documentation, whitepapers, and support forums.
+	- AWS Trusted Advisor 
+		- Access to the 7 core Trusted Advisor checks and guidance to provision your resources following best practices to 
+		increase performance and improve security
+	- AWS Personal Health Dashboard 
+		- A personalized view of the health of AWS services, and alerts when your resources are impacted.
+	- Business Support Plan 
+		- Business hours email access to Cloud Support Associates Unlimited cases / 1 primary contact
+		 - production workloads
+		 - 24x7 phone, email, and chat access to Cloud Support Engineers
+		 - Unlimited cases / unlimited contacts
+	- AWS Enterprise On-Ramp Support Plan 
+		- Intended to be used if you have production or business critical workloads
+		- Business Support Plan + 
+		- Access to a pool of Technical Account Managers (TAM)
+		- Concierge Support Team (for billing and account best practices)
+		- Infrastructure Event Management, Well-Architected & Operations Reviews
+		- Business-critical system down: < 30 minutes
+	- AWS Enterprise Support Plan
+		- Intended to be used if you have mission critical workloads
+		- AWS Enterprise On-Ramp Support Plan +
+		- Business-critical system down: < 15 minutes
+		
+Account Best Practices – Summary
+- Operate multiple accounts using Organizations
+- Use SCP (service control policies) to restrict account power
+- Easily setup multiple accounts with best-practices with AWS Control Tower
+- Use Tags & Cost Allocation Tags for easy management & billing
+- IAM guidelines: MFA, least-privilege, password policy, password rotation
+- Config to record all resources configurations & compliance over time
+- CloudFormation to deploy stacks across accounts and regions
+- Trusted Advisor to get insights, Support Plan adapted to your needs
+- Send Service Logs and Access Logs to S3 or CloudWatch Logs
+- CloudTrail to record API calls made within your account
+- If your Account is compromised: change the root password, delete and rotate all passwords / keys, contact the AWS support
+
+Billing and Costing Tools – Summary
+- Compute Optimizer: recommends resources’ configurations to reduce cost
+- Pricing Calculator: cost of services on AWS
+- Billing Dashboard: high level overview + free tier dashboard
+- Cost Allocation Tags: tag resources to create detailed reports
+- Cost and Usage Reports: most comprehensive billing dataset
+- Cost Explorer:View current usage (detailed) and forecast usage
+- Billing Alarms: in us-east-1 – track overall and per-service billing
+- Budgets: more advanced – track usage, costs, RI, and get alerts
+- Savings Plans: easy way to save based on long-term usage of AWS
+
+## Advanced Identity Section
+
+STS (SecurityToken Service) - Enables you to create temporary, limited- privileges credentials to access your AWS resources
+	- Ex : IAM Roles for Amazon EC2: provide temporary credentials for EC2 instances to access AWS resources
+
+Cognito - Identity for your Web and Mobile applications users (potentially millions) Ex : Fb login
+
+Microsoft Active Directory (AD) - Found on any Windows Server with AD Domain Services
+	- AWS Managed Microsoft AD - Create your own AD in AWS, manage users locally, supports MFA
+	- AD Connector - Directory Gateway (proxy) to redirect to on- premise AD, supports MFA
+	- Simple AD - AD-compatible managed directory on AWS
+
+AWS Single Sign-On (SSO) - Centrally manage Single SignOn to access multiple accounts and 3rd-party business applications.
+	- Supports SAML 2.0 markup. Integration with on-premise Active Directory
+
+Advanced Identity - Summary
+- IAM - Identity and Access Management inside your AWS account
+	  - For users that you trust and belong to your company
+- Organizations: manage multiple AWS accounts
+- Security Token Service (STS): temporary, limited-privileges credentials to access AWS resources
+- Cognito: create a database of users for your mobile & web applications
+- Directory Services: integrate Microsoft Active Directory in AWS
+- Single Sign-On (SSO): one login for multiple AWS accounts & applications
+
+## Other Services
+
+WorkSpaces - Managed Desktop as a Service (DaaS) solution to easily provision Windows or Linux desktops 
+	- Great to eliminate management of on-premise VDI (Virtual Desktop Infrastructure)
+	
+AppStream 2.0 - Stream a desktop application to web browsers Ex: chrome (no need to connect to a VDI)
+
+Sumerian - Create and run virtual reality (VR), augmented reality (AR), and 3D applications
+
+IoT Core - AWS IoT Core allows you to easily connect IoT devices to the AWS Cloud
+
+Elastic Transcoder - Elastic Transcoder is used to convert media files stored in S3 into media 
+	files in the formats required by consumer playback devices (phones etc..)
+	
+AppSync - Store and sync data across mobile and web apps in real-time
+
+Amplify - A set of tools and services that helps you develop and deploy scalable full stack web and mobile applications 
+
+AWS Device Farm - Fully-managed service that tests your web and mobile apps against desktop browsers, real mobile devices, and tablets
+
+Backup - Fully-managed service to centrally manage and automate backups across AWS services
+
+Disaster Recovery Strategies
+	- Backup and Restore- Cheapest. Backup data overtime and restore.
+	- Pilot Light - Core functions of the app Ready to scale, but minimal setup(Limited resources)
+	- Warm Standby - full version of the app, but at minimum size
+	- Multi-Site / Hot-Site - Highest cost. full version of the app, at full size
+	
+Elastic Disaster Recovery (DRS) - Quickly and easily recover your physical, virtual, and cloud-based servers into AWS
+	- Example: protect your most critical databases (including Oracle, MySQL, and SQL Server), enterprise apps (SAP),
+	protect your data from ransomware attacks
+
+DataSync - Move large amount of data from on-premises to AWS
+	- Replication tasks can be scheduled hourly, daily, weekly
+	- The replication tasks are incremental after the first full load
+	
+AWS Application Discovery Service - Plan migration projects by gathering information about on-premises data centers
+	- Agentless Discovery (AWS Agentless Discovery Connector)
+		- VM inventory, configuration, and performance history such as CPU, memory, and disk usage
+	- Agent-based Discovery (AWS Application Discovery Agent)
+		- System configuration, system performance, running processes, and details of the network connections between systems
+		
+Application Migration Service (MGN) - Converts your physical, virtual, and cloud-based servers to run natively on AWS
+	Supports wide range of platforms, Operating Systems, and databases
+	
+Fault Injection Simulator (FIS) - A fully managed service for running fault injection experiments on AWS workloads
+	- stressing an application by creating disruptive events (e.g., sudden increase in CPU or memory), 
+	observing how the system responds, and implementing improvements
+	
+Step Functions - Build serverless visual workflow to orchestrate your Lambda functions
+	- Features: sequence, parallel, conditions, timeouts, error handling
+	- Use cases: order fulfillment, data processing, web applications, any workflow
+
+Ground Station - Fully managed service that lets you control  sattelite communications, process data, and scale your satellite operations
+	- Use cases: weather forecasting, surface imaging, communications, video broadcasts
