@@ -18,3 +18,57 @@ Well Architected Framework  Pillars
 4) Performance Efficiency
 5) Cost Optimization
 6) Sustainability
+
+Operational Excellence - ability to run and monitor systems to deliver business value and 
+	to continually improve supporting processes and procedures
+
+
+Design Principles
+	- Perform operations as code - Infrastructure as code
+	- Annotate documentation - Automate the creation of annotated documentation after every build
+	- Make frequent, small, reversible changes - So that in case of any failure, you can reverse it
+	- Refine operations procedures frequently - And ensure that team members are familiar with it
+	- Anticipate failure
+	- Learn from all operational failures
+	
+Security - ability to protect information, systems, and assets while delivering business value 
+	through risk assessments and mitigation strategies
+
+Design Principles
+- Implement a strong identity foundation - Centralize privilege management and reduce (or even eliminate) reliance on long-term credentials - Principle of least privilege - IAM
+- Enable traceability - Integrate logs and metrics with systems to automatically respond and take action
+- Apply security at all layers - Like edge network, VPC, subnet, load balancer, every instance, operating system, and application
+- Automate security best practices
+- Protect data in transit and at rest - Encryption, tokenization, and access control
+- Keep people away from data - Reduce or eliminate the need for direct access or manual processing of data
+- Prepare for security events - Run incident response simulations and use tools with automation to increase your speed for detection, investigation, and recovery
+- Shared Responsibility Model
+
+Reliability - Ability of a system to recover from infrastructure or service disruptions, dynamically acquire computing resources to meet demand, and mitigate
+	disruptions such as misconfigurations or transient network issues
+
+Design Principles
+- Test recovery procedures - Use automation to simulate different failures or to recreate
+scenarios that led to failures before
+- Automatically recover from failure - Anticipate and remediate failures before they occur
+- Scale horizontally to increase aggregate system availability - Distribute requests across 
+	multiple, smaller resources to ensure that they don't share a common point of failure
+- Stop guessing capacity - Maintain the optimal level to satisfy demand without over or
+	under provisioning - Use Auto Scaling
+- Manage change in automation - Use automation to make changes to infrastructure
+
+Performance Efficiency - Includes the ability to use computing resources efficiently to meet
+system requirements, and to maintain that efficiency as demand changes
+and technologies evolve
+
+Cost Optimization - Includes the ability to run systems to deliver business value at the lowest price point
+
+Sustainability - The sustainability pillar focuses on minimizing the environmental impacts of running cloud workloads.
+
+AWS Well-Architected Tool - Free tool to review your architectures against the 6 pillars Well-Architected
+Framework and adopt architectural best practices
+
+AWS Right Sizing 
+- EC2 has many instance types, but choosing the most powerful instance type isn’t the best choice, because the cloud is elastic
+- Right sizing is the process of matching instance types and sizes to your workload performance and capacity requirements at the lowest possible cost
+- Scaling up is easy so always start small
