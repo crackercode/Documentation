@@ -70,6 +70,7 @@ Resource group - is a container that holds related resouces for an azure solutio
 	- help to apply Role-based access control (RBAC. Ex VM, SQL admin) premissions
 
 Azure subscription - Provides you with authenticated and authorized access to Azure products and services
+	- is a logical unit of azure services that links to an Azure account which is an identity in Azure Active Directory (Azure AD) or in  a directory that azure AD trusts.
 	- Allows you to provision resources
 	- An account can have one or multiple subscriptions
 	- Used to define boundaries around azure products, services and resources
@@ -87,4 +88,12 @@ Billing profiles - Multiple invoice sections. Generate invoices and payment meth
 
 Billing account - Multiple billing profiles
 
+Management Groups - allows you to manage Access, policies compliance for multiple subscriptions.
+	- All subscriptions within a single management group must trust the same Azure Ad tenant.
+	- Provides a level of scope above subscriptions. Ex HR(DEV+QA), Marketting(Free Trial+ EA subscription)	 
+	- Organize subscription into containers called MG and apply your governance conditions to the MG.
+	- Subscription within a management group automatically inheri the conditions applied to the MG.
+	- Used to break out user access to multiple subscriptions.
+
+Availability sets - a logical grouping of VMs that allows Azure to understand how your application is built to provide for redundancy and availability
  
