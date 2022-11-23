@@ -1,0 +1,90 @@
+Cloud Computing - The delivery of computing services, like serviers, storage, databases, networking over internet.
+Cloud computing is the delivery if compute services over internet to provide faster innovation, flexible resources, and economies if scale
+Pay only for cloud services you use
+
+Cost - Eliminates the capital expense of buying hardware and software and setting up and running on site datacenters
+
+Speed - Computing resources can be provisioned in minutes
+
+Performance - Azure runs on a worldwide network of secure datacenters, which regularly upgraded
+
+Reliability - Data backup, disaster recovery and business continuity are easir and less expnesive
+
+Cloud models 
+	- Public cloud - Offered over the public internet and available to anyone who wants to purchase them
+				   - Cloud resources are owned and operated by the cloud service provider
+				   - 
+	- Private Cloud - Used only by users from one business or organization
+					- Can be physically located in on-site datacenter or can be hosted by 2rd party service provider
+	- Hybrid cloud - Combines a public and private cloud by allowing data and applications to be shared between them
+	
+Scalability - apps in the cloud can scale vertically and horizontally
+	- Vertical - Increase compute capacity by adding RAM or CPU
+	- Horizontally - Increase compute capacity by adding instances or resources. Add vm's to confugration
+
+Elasticity - use autoscaling 
+
+Agility - Deploy and configure cloud based resources quickly as app requirments change
+
+Geo-distribution - Deploy apps and data to regional datacenters around the world to ensure 
+	that your customers always have the best performance in their region.
+	
+Disaster Recovery - Cloud based backup services, data replication options and geo-distribution allow data safety during disaster
+
+Capital Expenditure - up front spending of money on physical infastructure
+	- Requires significant up-front financial costs, ongoing maintenance, and support expenditures
+
+Operational Expenditure - is spending money on services or products now, and beign billed for them now. Ex cloud services
+	- Consumption-based model, organization is only responsible for the cost of the computing resources used.
+
+Infastructure as a service (IaaS) - offers compute,storage and networking resources on demand (pay as you go)
+	- service provider manages the infastructure. Customer purchases, installs, configures and manages software. 
+	- Ex OS, VM, Storage accounts
+
+Platform as a service (PaaS) - Development / deployment environment in the cloud
+	- Avoid expense and complexity of byuing and managing software licenses, underlaying application infastructure, BI services and middleware
+	- SQL databases, Azure app services
+	
+Software as a service (SaaS) - allows users to connect and use cloud based apps over the internet. 
+	- Ex : Outlook email, Ms office 365
+	- Use cases - Customer relationship management (CRM), Enterprice resource planning (ERP), Doc management
+	
+Azure regions - is a geographical area that contains at least one datacenters that are networked together with a low latency network
+	- some services or features are only available in certain regions
+	- Minimum 3 AZ within single region (Region >= 3 AZ)
+	
+Availability zones - created by using one or more datacenters iquipped with independent power, cooling and networking
+	- AZ's are connected through high-speed, private fibre optic networks 
+
+Region pairs - Each region is paired with another region within the same geography at least 300 miles away
+	- if region affected by natural disaster services would automatically failover to other region in its region pair
+	- one region is prioritized to make sure at least one is restored as quickly as possible
+	
+Resource - is manageable item that's available through azure. Ex VM, Application gateway, Azure cosmos DB
+
+Resource group - is a container that holds related resouces for an azure solution
+	- All resouces must be in a resource group
+	- A resouce can only be a memeber of a single resouce group
+	- Grouping resouces by lifecycle simplifies management of such resouces. Delete RG will delete sql vm both.
+		so group db in same RG.
+	- help to apply Role-based access control (RBAC. Ex VM, SQL admin) premissions
+
+Azure subscription - Provides you with authenticated and authorized access to Azure products and services
+	- Allows you to provision resources
+	- An account can have one or multiple subscriptions
+	- Used to define boundaries around azure products, services and resources
+	- Manage and track costs based on your needs( Ex track dev qa cost)
+
+Billing boundaries - Datemines how an azure account is billed for using Azure
+
+Access control boundary - Azure applies access-management policies at the subscription level
+	- can create separate subscriptions to reflect different organization structures
+	- can create separate subscriptions to set up separate env for DEV, QA or to isolate data for compliance reasons
+
+Invoice sections - Multiple subscription
+
+Billing profiles - Multiple invoice sections. Generate invoices and payment methods
+
+Billing account - Multiple billing profiles
+
+ 
