@@ -62,10 +62,10 @@ Region pairs - Each region is paired with another region within the same geograp
 	
 Resource - is manageable item that's available through azure. Ex VM, Application gateway, Azure cosmos DB
 
-Resource group - is a container that holds related resouces for an azure solution
-	- All resouces must be in a resource group
-	- A resouce can only be a memeber of a single resouce group
-	- Grouping resouces by lifecycle simplifies management of such resouces. Delete RG will delete sql vm both.
+Resource group - is a container that holds related resources for an azure solution
+	- All resources must be in a resource group
+	- A resource can only be a memeber of a single resource group
+	- Grouping resources by lifecycle simplifies management of such resources. Delete RG will delete sql vm both.
 		so group db in same RG.
 	- help to apply Role-based access control (RBAC. Ex VM, SQL admin) premissions
 
@@ -96,4 +96,50 @@ Management Groups - allows you to manage Access, policies compliance for multipl
 	- Used to break out user access to multiple subscriptions.
 
 Availability sets - a logical grouping of VMs that allows Azure to understand how your application is built to provide for redundancy and availability
- 
+
+Azure compute - is an on-demand computing service for running cloud based applications. Ex : VM, Container Instances, App Service, Functions
+
+Virtual machines - include a virtusa processor, memory, storage and networking resources
+	
+VM Scale Set - Used confiture and deploy identical VM's. Autoscaling. As demand increases VM can be added and as demand decreases VM can be removed
+	- Process can be manual or automated or combination of both
+
+Containers and Kubernates - Azure compute resources that you can used to deploy and manage containers
+	- Lightweight, Virtusalized application env(Can be deployed anywhere)
+	- can run multiple instances of a containerized application on a single host machine
+
+App Service (PaaS) - Quickly build,deploy and scale enterprise-grade web, mobile and API apps running on any platform
+
+Functions - concerned only about the code running your service and not the underlaying platform or infastructure
+	- Used when you need to perform work in response to an event. timer or message from another azure service
+	
+Azure Container Instances (ACI) - Package, deploy and manage cloud apps
+	- Fastest and simplest way to run a container in Azure, without having to manage VMs
+	- Great for scenarios that can operate in isolated containers
+	
+Azure Container Registry - 
+
+Azure Kubernates Service - AKS - Deploy a managed kubernetes cluster in Azure
+	- Kubernates masters are managed bu Azure. User manages and maintains agent nodes
+	- User if you need full container orchestration
+	
+Azure portal - Deploy, manage and delete azure resources
+
+Azure PowerShell - connect to azure subscription and deploy, manage and delete azure resources
+
+Azure CLI - A cross platform command line program to connect to Azure and execute administrative commands
+
+Azure Cloud Shell - Browser based scripting environment
+
+Azure Mobile App - Access manage monitor Azure accounts and resources from IOS and Android.
+	- Get notifications and alerts about important health issues and diagnose and fix many issues
+	- Start stop and restart VM's and web apps
+	- Connect to your VM and manage permission with role based access control
+
+Azure REST APIs - Service endpoints that support sets if HTTP operations
+	 - Provide create, retrieve, update and delete access to the service resources
+	 - When developing solutions that need to talk to Azure
+	 
+Azure Advisor - Free service that helps you follow best practices to optimize deployments
+	- Recommendations on availability, security, performance and cost.
+
