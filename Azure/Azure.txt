@@ -143,3 +143,61 @@ Azure REST APIs - Service endpoints that support sets if HTTP operations
 Azure Advisor - Free service that helps you follow best practices to optimize deployments
 	- Recommendations on availability, security, performance and cost.
 
+Address Space - Specify a custom private IP address space using public and private addresses
+	 - Azure assign resources in a virtual network a private IP address from the address space
+	 
+Virtual network = Subnet = VM1 + VM2
+	- scoped to a single region/location
+	- Scoped to a single subscription
+	- can have multiple vNet within each subscription and region
+	- Key networking capabilities
+		- Isolation
+		- Segmentation
+		- Internet communications
+		- Communication between azure resources
+		- Communication between on prem resources
+		- Route network traffic
+		- Filter network traffic
+		- Connect virtual networks
+
+Subnets - Segment virtual network into sub networks. Deploy azure resources in  a specific subnet
+	- Segment virtual network address space as appropriate
+	- Secure resources within subnets with Network Security Groups
+
+Virtusa Network Peering - Connect multiple VNet from different regions
+	- Traffic between peered vNet is private
+	- No public internet, gateway. Encryption required 
+	Virtual network peering - connect vNet within same region
+	Global virtual network peering - connect vNet across regions
+
+Communicate between Azure resources
+		- Virtual networks - connect VM's and other azure resources (App service env for power apps, AKS, VM scale set)
+		- Service endpoints - connect to other azure resource types (Azure SQL, storage accounts)
+		
+Communicate with on-prem resources 
+	- Point to site VPN's - VPN connection is from a computer outside the organization, back into the corparate network
+		- Client computer initiates an encypted VPN connection to connect that computer to the Azure vNet.
+	- Site to site VPN's -  Link on prem VPN device or gateway to azure VPN gateway in vNet
+		- Connection is encrypted and works over the internet		
+	- Azure ExpressRoute - environments where you need greater bandwith and even higher level of security
+		- Dedicated private connectivity to azure that doesn't travel over the internet
+	
+Route Network Traffic - routes traffic between subnets on any connected VM, on prem networks and into. Use route tablesm Boarder gateway protocol, BGP
+
+Route tables - Defines rules about how traffic should be directed
+
+Border Gateway Protocol - BGP - Propogate on prem BGP routes to azure vNet.
+	- Works with azure VPN gateways, Azure Route Server, ExpressRoute
+	
+vNet filter network traffic between subnets by using Network Security Groups and Network Virtual Appliances
+
+Network Security Groups - contains inbound and outbound security rules	
+	
+Network Virtual Appliances - Specialized VM that can be compared to a hardened network appliance
+	- Execute network functions - firewall or WAN optimization
+	
+User Defined Routes - Allow network admin to control the routing tables between subnets within a vNet as well as between vNets
+
+Azure DNS - Provide name resolution by using azure infastructure
+	- Can't use azure DNS to buy a domain name
+	- Doesn't support DNSSEC
