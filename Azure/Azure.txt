@@ -217,3 +217,9 @@ Azure ExpressRoute - Extends on prem networks into the Microsoft cloud over a pr
 	- Don't go over the public internet. So reliable, faster, consistent latencies, higher security
 	- Connect on prem to office365, Dunamics 265, Azure private peering for vNet
 	- Connectivity options - any-to-any, point-to-point, virtusal cross connection
+	
+Azure Private Link - Allows you to access azure PaaS services(Azure storage,SQL DB) and 
+	azure hosted customer owned/partner services over a private endpoint in your vNet
+
+Private Endpoint - is network interface that uses a private ip address from your vNet that connects you privately and securely to a service
+	that connects you privately and securelu to a service that's powered by Azure Private Link.

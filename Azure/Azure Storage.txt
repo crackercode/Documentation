@@ -1,0 +1,20 @@
+Azure Storage Accounts - Provide a unique namespace for your azure storage data that's accessible from anywhere over HTTP(S).
+	- Standard general purpose v2
+	- Premium block blobs
+	- Premium files shares
+	- Premium page blobs
+
+Azure Blob Storage - obect storage solution. optimized for storing massive amounts of unstructured data.
+	- can access via HTTP(s), Storage REST API, Azure PowerShell, Azure CLI, Azure Storage client library
+
+Azure Data Lake Storage Gen2
+
+Blob Container - A container organizes a set of blobs, similar to a directory in a file system. 
+A storage account can include an unlimited number of containers, and a container can store an unlimited number of blobs.
+
+Blobs - Microsoft's object storage solution for the cloud
+
+Storage Access Tiers 
+	- Hot access tier - storing data that is accessed or modified frequently
+	- Cool tier - for storing data that is infrequently accessed or modified stored for a minimum of 30 days
+	- Archive tier - storing data that is rarely accessed, and that has flexible latency requirements, for a minimum of 180 days
