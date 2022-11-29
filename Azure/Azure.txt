@@ -201,3 +201,19 @@ User Defined Routes - Allow network admin to control the routing tables between 
 Azure DNS - Provide name resolution by using azure infastructure
 	- Can't use azure DNS to buy a domain name
 	- Doesn't support DNSSEC
+	
+Azure DNS Private Resolver - Query DNS private zones from an on prem env and vice verse without deploying VM-based DNS servers.
+
+VPN Gateway - VPN's use an encrypted tunnel within another network
+	- Deployed to connect 2 or more trusted private networks to one another over an untrusted network (Public Internet)
+	- Traffic is encrypted while traveling over the untrusted network
+		- Policy based - Specify statically the IP address of packets that should be encrypted through each tunnel
+		- Route based VPN - are preferred connection method for on prem devices
+	- Allows u to connect on prem datacenters to vNets through a site-to-site connection
+	- Allows connect individual devices to vNet through a point-to-ste connection
+	- Allows connect vNet to other virtusal networks through a network-to-network connection
+	
+Azure ExpressRoute - Extends on prem networks into the Microsoft cloud over a private connection via a connectivity provider.
+	- Don't go over the public internet. So reliable, faster, consistent latencies, higher security
+	- Connect on prem to office365, Dunamics 265, Azure private peering for vNet
+	- Connectivity options - any-to-any, point-to-point, virtusal cross connection
