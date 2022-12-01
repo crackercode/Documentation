@@ -18,3 +18,75 @@ Storage Access Tiers
 	- Hot access tier - storing data that is accessed or modified frequently
 	- Cool tier - for storing data that is infrequently accessed or modified stored for a minimum of 30 days
 	- Archive tier - storing data that is rarely accessed, and that has flexible latency requirements, for a minimum of 180 days
+	
+Azure Files - Fully managed file shares in the cloud that are accessible via the industry 
+	standard Server Message Block(SMB)(Windows,MAC,Linux) protocol or Network File System(NFS)(Linux,MAC) protocol.
+	
+Azure Queues - Store large number of messages
+	- each queue maintains a list of messages that can be added by a sender component and processed by a receiver component
+	
+Azure Table Storage - Stores non relational structured data in the cloud
+	- Provide key/attribute store with a schemaless design
+	- Acces is typical lower in cost than traditional SQL for similar volumes of data
+	- Stores flexible datasets like user data for web apps, address books, device info
+	- Stores datasets that doesn't require complex joins, fk or stored procedures
+	
+Azure managed disks - Block level storage volumes managed by Azure
+
+Types of managed disks :
+	- Ultra disks - Highest performing storage option for azure VM's. Data intensive workloads
+	- Premium solid state drives - High performance and low latency disk for VM's. IO intensive workloads
+		- Mission critical production appls
+	- Standard SSDs - for workloads that need consistent performance at lower IOPS levels.
+		- web servers, low IOPS app servers, non prod workloads
+	- Standard Hard Disk Drives - Deliver reliable low cost disk support. latency tolerant workloads
+Types of disk roles : 
+	- Data Disk -  to store application data, or other data you need to keep
+	- OS Disk - Every VM has one operating system disk. Pre installed OS when VM created
+	- Temporary Disk - Short term storage for applications and processes
+	
+Locally Redundant Storage(LRS) - copies data synchronously three times within a single physical location(data center) in the primary region
+	- lower cost and least durable.
+	- Protects data againts server rack and drive failures
+	- Ex : apps is restricted to replicating data only within a country or region due to data governance
+
+Zone Redundant Storage(ZRS) - copies data synchronously across three AZ in primary region
+	- High availability
+	- Ex : restricted replication of data to within a country or region to meet data governance
+	- ZRS support Blob, Azure files, Azure table storage, Azure queue storage
+	
+Geo	Redundant Storage (GRS) - copies data synchronously 3x within a single physical location in the primary region using LRS
+
+Geo Zone Redundant Storage (GZRS) - copies data synchronously across 3x AZ in the primary region using ZRS
+	- Support Blob, Azure files, Azure table storage, Azure queue storage
+
+with GRS and GZRS data in secondary region isn't available for read or write access unless there is a failover.
+
+RA-GRS or RA-GZRS - configure allow read access to secondary region.
+
+AzCopy - Copy blob or files from storage account
+	Blob - Azure AD & SAS(Shared Access Signature Token)
+	File - SAS
+	
+Azure File Sync - Centralize file shares in Azure files
+Access Protocols
+	- SMB (Server Message Block)
+	- NFS (Network File System)
+	- FTPS (File transfter protocol secure)
+	
+Cloud Tiering - Frequently accessed files are cached on local server
+	- Least frequently accessed files are tiered to the cloud
+	- Tiered files can quickly be recalled on demand
+	- Ex : ideal for distributed access scenario. Changes made to server in one automatically sync to others
+	
+Cloud site backups - Take centralized backups in the cloud using Azure Backup
+
+Azure Migrate - Centralize hub to access and migrate on prem servers, infastructure, apps and date to Azure.
+	Azure Migrate : Discovery and Assessment - allows you to discover and access servers including SQL and web apps
+	Azure Migrate : Server Migration - is used to migrate VMware VMs, Hyper VMs, Physical servers, virtualized servers public cloud VMs to Azure
+	Data Migration Assistant - migrate SQL server DB to Azure SQL database, Azure SQL managed instance, Azure VMs running SQL server
+	Azure Database Migraration Service - Migrate on prem database to Azure VMs running SQL server, Azure SQL DB, SQL managed instance
+	Movere (SaaS) - Movere automates discovery, scanning, and collection of IT data within your organization. 
+		You analyze collected data to learn about your infrastructure, devices, and apps, make smart decisions, and facilitate migration to the cloud
+	Web/Azure app Migration Assistant - Migrate on prem web apps and to migrate them to Azure
+	Azure Data Box - Migrate large amounts of offline data to Azure
