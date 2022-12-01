@@ -1,1 +1,38 @@
 Securing Network Connectivity
+
+Confidentiality - Priniciple of least privilege [Restricts access to information]
+Intergrity - Prevention of unauthorized changes to information [Use one way hash - encryption]
+Availability - Ensure services remain available to authorized users [Stop DDOS]
+
+Azure firewall - MS managed network security service in the Azure that protects Azure vNet resources
+ - Ex : Use static public ip address to represent vNet resources. Inbound Outbound filtering rules
+ 
+Azure DDos Protection
+	Basic - by default enabled
+	Standard - add mitigation capabilities
+	
+NSG - Network Security Groups (NSGs) - Filter network traffic to and from Azure resources connected to vNet
+	- Inbound and Outbound rules
+	
+Application Security Groups - Configure network security as an extension of an applications structure
+
+Azure Active Directory - MS Azure based identity and access management service.
+	- allows users to sign in and access resources
+	
+Azure AD Features
+	- Application management features - Application proxy, Single sign on, My apps portal
+	- Authentication features - self service password reset, Multi-Factor authentication, Banned pw lists, Smart lockout
+	- Hybrid identity features - AD connect and connect health
+	- Reporting and monitoring features - Insights into security and usage patterns
+	- Privileged identity management (PIM) - Manage, control and monitor access to resources
+
+Authentication - Ex : Azure AD Multi-Factor Authentication 
+Single Sign On (SSO) - Automatically signs users in when they are on their corporate devices connected to your corporate network
+Application Management - Application management in Azure Active Directory (Azure AD) is the process of creating, configuring, managing, and monitoring applications in the cloud 
+Business to Business (B2B) - can securely share your company's applications and services with external users, while maintaining control over your own corporate data
+Business to Customer (B2C) - customers use their preferred social, enterprise, or local account identities to get single sign-on access to your applications and APIs
+Device Management - Management of cloud and on prem devices
+
+Azure AD Domain Services (AADDS) - managed version of on prem AD
+	- Domain join, Group policy, LDAP, Kerberos, NTLM authentication
+	- Managed domain is configured for one way synchronization from Azure AD
