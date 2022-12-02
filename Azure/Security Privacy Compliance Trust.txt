@@ -18,21 +18,83 @@ Application Security Groups - Configure network security as an extension of an a
 
 Azure Active Directory - MS Azure based identity and access management service.
 	- allows users to sign in and access resources
+	- AD free and AD Premium P1
 	
-Azure AD Features
+Azure AD Features 
 	- Application management features - Application proxy, Single sign on, My apps portal
 	- Authentication features - self service password reset, Multi-Factor authentication, Banned pw lists, Smart lockout
 	- Hybrid identity features - AD connect and connect health
 	- Reporting and monitoring features - Insights into security and usage patterns
 	- Privileged identity management (PIM) - Manage, control and monitor access to resources
 
-Authentication - Ex : Azure AD Multi-Factor Authentication 
+Authentication - Main function of Azure AD is the verification or authentication of credentials any time an end user singns into a device, service or application 
+	Ex : Azure AD Multi-Factor Authentication, Self service pw reset (SSPR), Passwordless authentication (Windows 10 hello)
+
 Single Sign On (SSO) - Automatically signs users in when they are on their corporate devices connected to your corporate network
 Application Management - Application management in Azure Active Directory (Azure AD) is the process of creating, configuring, managing, and monitoring applications in the cloud 
 Business to Business (B2B) - can securely share your company's applications and services with external users, while maintaining control over your own corporate data
-Business to Customer (B2C) - customers use their preferred social, enterprise, or local account identities to get single sign-on access to your applications and APIs
+	- Share apps and services with guest users
+Business to Customer (B2C) - customers use their preferred social(FB), enterprise, or local account identities to get single sign-on access to your applications and APIs
 Device Management - Management of cloud and on prem devices
 
 Azure AD Domain Services (AADDS) - managed version of on prem AD
 	- Domain join, Group policy, LDAP, Kerberos, NTLM authentication
 	- Managed domain is configured for one way synchronization from Azure AD
+
+Conditional Access(Paid) - Allows you to specify conditions(user, location, device, application, risk) under which users can access apps and data.
+	- user or group membership - allows you to target specific users and groups with the policy
+	- named location information - created using ip address ranges. Used when making policy decision
+	- Device - allows you to create a policy that targets users with specific devices or with devices in a specific state
+	- application - signal ensures that users who are trying to access specific applications will trigger different conditional access policies
+	- real time sign in risk detection - allows a conditional access policy to identify resky sign in behaviour
+	- cloud apps or actions - is used to include or exclude certain cloud application or user actions
+	- user risk - is onlu available to customer that have access to identify protection. It refers to the probability that an account is compromised
+
+Azure AD role based access control - Used to control permissions for Azure AD resource management
+	- Global administrator - provide access to all administrative features in AD. Sign up for AD tenant = GA
+	- User administrator - create and manages all aspects of users and groups. manages subscriptions and support tickets, monitor health
+	- Billing administrator - make purchases, manages subscriptions and support tickets, monitor service health
+	
+	- Custom rols - flexible access. organization wide scope, object scope. only for AD premium P1 or AD premium P2.
+	- Role based access control - manage access using roles
+	
+Zero trust methodology - t
+
+Guiding principles
+	- Verify explicitly - Always authenticate and authorize based on all available data points.
+	- Use least privilege access - Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.
+	- Assume breach - Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses
+
+Six Foundation Pillars
+	- Identities - verify before identities access a resource
+	- Devices - monitor device for health and compliance
+	- Applications - discover all apps in use, whether we know about them or not
+	- Data - Data should be classified, labeled and encrypted based on it's attributes
+	- Infastructure - use telemetry to detect attacks and other anomalies
+	- Network - sementing networks improves your security 
+	
+Defence in Depth - prevents data breaches and slows down unauthenticated attempts to access data. 7 layers of protection and validation
+	- Physical - typically limits access to the datacenter to only authorized personnel
+	- Identity & access - controll access to infastructure and change control
+	- Perimeter - filter and protects againts DDos.
+	- Network - limit communication between resources
+	- Compute layer - can secure access to VM by closing ports
+	- Application layer - ensure applications are secure and free of security vulnerabilites
+	- Data layer - controll acess to business and customer data. encryption
+	
+CIA
+	Confidentiality - keep sensitive data confidential
+	Intergrity - keep data or messages correct
+	Availability - make data available those who need it
+	
+Defender for cloud -  is a tool for security posture management and threat protection
+	- Strengthens security posture of cloud resources through and integrated collection of plans
+	- Defender for cloud protects workloads running in Azure,hybrid and other cloud platforms
+	- Secure score - central feature in defender for cloud
+	
+Monitoring and Reporting  - used to logically organize your Azure resources. Add meta data
+
+Azure monitor - collect analyze cloud and on pre env
+
+Role based access control - provide fine grained access management for Azure resources
+
