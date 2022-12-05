@@ -1,0 +1,27 @@
+Cloud computing - delivery of computing services over the internet or cloud
+
+Benifits of cloud computing - Reduced costs(consumption based model), Scalability, Speed/ Agility, Increased productivity, Improved performance, Reliability, Security
+
+Public cloud - platform and services owned by provider
+	- No capital expenditures
+	- Increased agility
+	- Pay-per-use model (OpEx model)
+	- No maintenance. Fewer in house skills.
+
+Private cloud - owned / operated by the organization that uses the cloud resources
+	- each organization creates it's own cloud env in its datacenter
+	- Ex : data can't ve put in the public cloud for legal reasons
+	- control, security and compliance managed by organization
+	- Upfront CapEx costs
+	- maintenance and skills set required
+	- less agile
+	
+Hybrid cloud - combine both public and private clouds in order to run applications where most appropiate
+	- Ex : app hosted public and db in private for leagl reasons
+	- Flexible solutions
+	- have security, control and compliance
+	- Upfront CapEx costs
+	- management complexity
+
+Azure Marketplace - connects end uses with MS partners, Independant software vendors and purchase apps from certified service providers
+

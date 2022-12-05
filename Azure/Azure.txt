@@ -56,7 +56,7 @@ Azure regions - is a geographical area that contains at least one datacenters th
 Availability zones - created by using one or more datacenters iquipped with independent power, cooling and networking
 	- AZ's are connected through high-speed, private fibre optic networks 
 
-Region pairs - Each region is paired with another region within the same geography at least 300 miles away
+Region pairs - Each region is paired with another region within the same geography at least 300 miles away(East US, West US)
 	- if region affected by natural disaster services would automatically failover to other region in its region pair
 	- one region is prioritized to make sure at least one is restored as quickly as possible
 	
@@ -68,6 +68,10 @@ Resource group - is a container that holds related resources for an azure soluti
 	- Grouping resources by lifecycle simplifies management of such resources. Delete RG will delete sql vm both.
 		so group db in same RG.
 	- help to apply Role-based access control (RBAC. Ex VM, SQL admin) premissions
+	- Containers for multiple resources that share the same life cycle
+	- Aggredates resources into a single manageable unit
+
+Azure Resouce Manager - Create, configure, manage and delete resources and resource groups
 
 Azure subscription - Provides you with authenticated and authorized access to Azure products and services
 	- is a logical unit of azure services that links to an Azure account which is an identity in Azure Active Directory (Azure AD) or in  a directory that azure AD trusts.
@@ -75,6 +79,8 @@ Azure subscription - Provides you with authenticated and authorized access to Az
 	- An account can have one or multiple subscriptions
 	- Used to define boundaries around azure products, services and resources
 	- Manage and track costs based on your needs( Ex track dev qa cost)
+	
+Global Azure Services - AD , Traffic Manager(Azure Traffic Manager is a DNS-based traffic load balancer), MS Azure DNS
 
 Billing boundaries - Datemines how an azure account is billed for using Azure
 
@@ -96,28 +102,38 @@ Management Groups - allows you to manage Access, policies compliance for multipl
 	- Used to break out user access to multiple subscriptions.
 
 Availability sets - a logical grouping of VMs that allows Azure to understand how your application is built to provide for redundancy and availability
+	- Keep app online during maintenance or hardware failure
+		- Update domains - scheduled security updates
+		- Fault domains - change hardware in a datacenter
 
 Azure compute - is an on-demand computing service for running cloud based applications. Ex : VM, Container Instances, App Service, Functions
 
-Virtual machines - include a virtusa processor, memory, storage and networking resources
+Virtual machines(IaaS) - include a virtusa processor, memory, storage and networking resources
 	
 VM Scale Set - Used confiture and deploy identical VM's. Autoscaling. As demand increases VM can be added and as demand decreases VM can be removed
-	- Process can be manual or automated or combination of both
+	- Process can be manual or automated( = auto scale) or combination of both
 
 Containers and Kubernates - Azure compute resources that you can used to deploy and manage containers
 	- Lightweight, Virtusalized application env(Can be deployed anywhere)
 	- can run multiple instances of a containerized application on a single host machine
 
-App Service (PaaS) - Quickly build,deploy and scale enterprise-grade web, mobile and API apps running on any platform
+App Service (PaaS) - Quickly build, deploy and scale enterprise-grade web, mobile and API apps running on any platform. No infra maintenance.
+	- Support multiple languages and frameworks
+	- DevOps optimization(Support GitHub, BitBucket,DockerHub, ACR)
 
-Functions - concerned only about the code running your service and not the underlaying platform or infastructure
-	- Used when you need to perform work in response to an event. timer or message from another azure service
+Serverless Computing - is an environment hosted in cloud to run code
+	Functions - concerned only about the code running your service and not the underlaying platform or infastructure
+		- Used when you need to perform work in response to an event. timer or message from another azure service
+	Azure logic apps - a cloud platform where you can create and run automated workflows with little to no code
+		- Ex : SAP, Oracle, salesforce
+	Azure event grid -  is a highly scalable, event broker that you can use to integrate applications using events.
+		Events are delivered by Event Grid to subscriber destinations such as applications, Azure services, or any endpoint 
 	
 Azure Container Instances (ACI) - Package, deploy and manage cloud apps
 	- Fastest and simplest way to run a container in Azure, without having to manage VMs
 	- Great for scenarios that can operate in isolated containers
 	
-Azure Container Registry - 
+Azure Container Registry (ACR) - Build, store, secure, scan, replicate, and manage container images and artifacts with a fully managed, geo-replicated instance of OCI distribution. Connect across environments, including Azure Kubernetes Service and Azure Red Hat OpenShift, and across Azure services like App Service, Machine Learning, and Batch.
 
 Azure Kubernates Service - AKS - Deploy a managed kubernetes cluster in Azure
 	- Kubernates masters are managed bu Azure. User manages and maintains agent nodes
@@ -147,6 +163,7 @@ Address Space - Specify a custom private IP address space using public and priva
 	 - Azure assign resources in a virtual network a private IP address from the address space
 	 
 Virtual network = Subnet = VM1 + VM2
+	- Provides secure communication between Azure resources
 	- scoped to a single region/location
 	- Scoped to a single subscription
 	- can have multiple vNet within each subscription and region
@@ -159,6 +176,14 @@ Virtual network = Subnet = VM1 + VM2
 		- Route network traffic
 		- Filter network traffic
 		- Connect virtual networks
+		
+Azure Load Balancer - automatically scales to create highly available access to applications or resources
+
+VPN Gateway - is a platform managed scalable and highly available application delivery controller
+
+Azure Application Gateway - provides for the management of traffic to web application
+
+Content Delivery Network - provides a distributed network of servers that efficiently deliver web content in their local region
 
 Subnets - Segment virtual network into sub networks. Deploy azure resources in  a specific subnet
 	- Segment virtual network address space as appropriate
@@ -204,7 +229,7 @@ Azure DNS - Provide name resolution by using azure infastructure
 	
 Azure DNS Private Resolver - Query DNS private zones from an on prem env and vice verse without deploying VM-based DNS servers.
 
-VPN Gateway - VPN's use an encrypted tunnel within another network
+VPN Gateway - VPN's use an encrypted tunnel within another network or an on prem network
 	- Deployed to connect 2 or more trusted private networks to one another over an untrusted network (Public Internet)
 	- Traffic is encrypted while traveling over the untrusted network
 		- Policy based - Specify statically the IP address of packets that should be encrypted through each tunnel
@@ -222,4 +247,56 @@ Azure Private Link - Allows you to access azure PaaS services(Azure storage,SQL 
 	azure hosted customer owned/partner services over a private endpoint in your vNet
 
 Private Endpoint - is network interface that uses a private ip address from your vNet that connects you privately and securely to a service
-	that connects you privately and securelu to a service that's powered by Azure Private Link.
+	that connects you privately and securely to a service that's powered by Azure Private Link.
+ 
+Azure Synapse - analytics service that brings together data integration, enterprise data warehousing, and big data analytics. 
+	- Azure Synapse brings these worlds together with a unified experience to ingest, explore, prepare, 
+		transform, manage, and serve data for immediate BI and machine learning needs
+	- Azure Synapse = SQL analytics + Spark + Data Integration + Studio
+	
+Internet of things (IOT) - ability to use devices to collect data and then to relay that data to a hub for further analysis.
+Internet of things (IOT) = Azure IOT cental + Azure IOT Hub
+
+Azure IOT cental (SaaS) - Global service that makes it easy to connect, monitor and manage your IoT assets at scale.
+
+Azure IOT Hub - manged service that acts as a central message hub for bidirectional communication between IoT apps and devices.
+
+Azure Sentinel - Provides intelligent security analytics and threat intelligence across tha enterprise
+
+Big Data and Analytics - Azure SQL Data Warehouse, Azure HDInsight, Azure Data Lake Analytics
+
+Azure Databricks(Spark) - read data from multiple data sources (Blob,Data lake storage, Cosmos DB, SQL Data Warehouse)
+
+Azure Data Lake Analytics vs Azure Databricks(Spark)
+From our simple example, we identified that Data Lake Analytics is more efficient when performing transformations and load operations by using runtime processing and distributed operations. On the other hand, Databricks has rich visibility using a step by step process that leads to more accurate transformations. Efficiency, accuracy and scalability, should all be considered while making your decision about the right tool choice for your ETL process.
+
+Artificial Intelligence - use machine learing services(Azure Machine Learning Service) 
+
+Azure Machine Learning Service - develop, train, test, deploy, manage and track machine learning models
+
+Azure Machine Learning Studio - drag and drop tool for ML
+
+Azure Congnitive Service - use to build cognitive intelligence(Image Processing,Text to speech, Face Detection) into apps.
+
+Azure Sphere - Security service allows MCU(a device) to securely connect to the cloud.
+
+Azure Security Center - Analyze and identify possible inbound attacks and investigate threats
+
+Azure Key Vault - Store application secrets in a centralized cloud location to securely controll access permission and access logging.
+	- secret management, key management, certificate management, stores secrets backed by HSMs
+
+Azure Information Protection - define rules and conditions. Ex : word doc confidential levels
+Azure advanced threat protection - used to identify, detects and investigate advanced threats and compromised identities
+
+Service Trust Portal - audit repots. Region wise Certifications, Regulations and Standard
+Compliance manager - helps you manage your organization’s multicloud compliance requirements
+
+Azure government service and Azure China 21Vianet - Separate cloud by country
+
+Service Level Agreements(SLA) - documents which contains details performance standards (Ex DB uprime 99.99%)
+	- If SLA failed discount given.
+Avilability metrics - mean time to recovery, mean time between failure, recovery time objective, recovery point objective
+
+Public and private preview features - offers previews cetrain azure services, features and functionality
+
+Subscription offers- Pay as you go dev/test, VS enterprise, VS professional

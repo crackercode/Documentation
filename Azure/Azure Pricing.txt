@@ -1,0 +1,23 @@
+Azure Cost Management - set of too;s that organization can use to monitor. allocate and optimize Azure costs
+
+Purchase Azure Products
+	- Enterprise customers - commits to spending a negitiated amount
+	- Web direct customers - pays for services monthly via the Azure websites
+	- Cloud solutions provider - customers pay CSP directly for service. hire MS partner
+	
+Factors affecting costs - Resouce type, services, location, bandwith of inboud(free) and outboud(cost based on zones)
+
+Pricing calculator - Used to estimate the cost of different Azure products
+
+TCO(Total Cost of Ownership) calculator - estimate cost saving by migrating workloads to Azure
+
+- Cost analysis - Use Pricing calculator and TCO calculator
+- Monitor usage - Azure advisor identifies unused and untilized resouces
+- Spending limits - prevent you from exhausting the credit on your account
+- Reservation -  discounted prices in certain products/resouces if you pay in advance
+- Locations/ Regions - Choose lower cost locations and regions when deplying resouces
+- Cost saving offers - Check subscription offers
+- Leverage Tags - apply tags to resouces and use tags to organize billing data
+
+
+Azure management groups - efficiently manage access, policies, and compliance for those subscriptions. Management groups provide a governance scope above subscriptions

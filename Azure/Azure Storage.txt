@@ -81,6 +81,10 @@ Cloud Tiering - Frequently accessed files are cached on local server
 	
 Cloud site backups - Take centralized backups in the cloud using Azure Backup
 
+Azure Consmos DB - globally distributed database service that enables you to elastically and independently scale throughput and storage
+
+Azure SQL Database - is a relational DB as a service(Daas) based on the latest version of MS SQL server DB engine.
+
 Azure Migrate - Centralize hub to access and migrate on prem servers, infastructure, apps and date to Azure.
 	Azure Migrate : Discovery and Assessment - allows you to discover and access servers including SQL and web apps
 	Azure Migrate : Server Migration - is used to migrate VMware VMs, Hyper VMs, Physical servers, virtualized servers public cloud VMs to Azure
